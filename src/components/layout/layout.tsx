@@ -1,8 +1,10 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import classes from './layout.module.scss';
+
 import { Footer } from '../footer/footer';
 import { Header } from '../header/header';
+
+import classes from './layout.module.scss';
 
 const Layout = () => (
     <div className={classes.page}>
