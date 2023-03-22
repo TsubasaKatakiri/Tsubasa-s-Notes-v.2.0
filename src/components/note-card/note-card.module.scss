@@ -1,0 +1,159 @@
+@import '../../scss/vars.scss';
+
+.note{
+    font-family: 'Architects Daughter', cursive;
+    font-style: italic;
+    max-width: 600px;
+    width: calc(50% - 40px);
+    background-color: $background-color4;
+    padding: 20px;
+    padding-bottom: 40px;
+    margin: 20px;
+    position: relative;
+
+    &.presentation{
+        width: 100%;
+        max-width: 1280px
+    }
+
+    &Datetime{
+        display: block;
+        font-family: 'Poppins', sans-serif;
+        font-style: normal;
+        color: $font-color2;
+        margin-bottom: 12px;
+    }
+
+    &Title{
+        display: block;
+        width: 100%;
+        font-size: 32px;
+        line-height: 40px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid $border2;
+        margin-bottom: 16px;
+    }
+
+    &Text{
+        font-size: 18px;
+        line-height: 24px;
+        width: 100%;
+
+        &Card{
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            height: 72px;
+        }
+
+        &Container{
+            width: 100%;
+            padding-bottom: 16px;
+            border-bottom: 1px solid $border2;
+            margin-bottom: 11px;
+        }
+    }
+}
+
+.infoBlock{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    color: $font-color1;
+}
+
+.tag{
+    display: inline-block;
+    background-color: $accent1;
+    padding: 5px 10px;
+    color: $background-color1;
+    margin: 5px 0;
+    margin-right: 10px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+
+    &:last-child{
+        margin-right: 0;
+    }
+
+    &Line{
+        width: 100%;
+        font-family: 'Poppins', sans-serif;
+        font-style: normal;
+        display: inline;
+        padding-bottom: 11px;
+        border-bottom: 1px solid $border2;
+        margin-bottom: 16px;
+    }
+}
+
+.controlBlock{
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    right: 20px;
+
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.button{
+    border: 0;
+    outline: 0;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background-color: $border2;
+    color: $background-color1;
+    padding: 10px 20px;
+    margin-right: 15px;
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &.buttonIcon{
+        height: 38px;
+        width: 48px;
+        padding: 0;
+    }
+
+    &:last-child{
+        margin-right: 0;
+    }
+
+    &.blue{
+        background-color: $blue;
+    }
+
+    &.green{
+        background-color: $green;
+    }
+
+    &.orange{
+        background-color: $orange;
+    }
+
+    &.red{
+        background-color: $red;
+    }
+
+    &:disabled{
+        background-color: $disabled;
+        cursor: default;
+    }
+}
+
+.icon{
+    fill: $background-color1;
+    width: 24px;
+    height: 24px;
+}

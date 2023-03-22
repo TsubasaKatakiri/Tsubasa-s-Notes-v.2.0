@@ -1,0 +1,37 @@
+@import '../../scss/vars.scss';
+@import '../../scss/mixins.scss';
+
+.dialog{
+    width: 450px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &Header{
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 16px;
+    }
+
+    &Text{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 16px;
+    }
+
+    &Controls{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.button{
+    @include button;
+    width: 140px;
+}

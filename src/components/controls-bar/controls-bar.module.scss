@@ -1,0 +1,53 @@
+@import '../../scss/vars.scss';
+
+.controls{
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.searchBar{
+    outline: 0;
+    width: 100%;
+    margin-right: 20px;
+    border-radius: 20px;
+    border: 1px solid $border1;
+    padding: 10px 20px;
+    background-color: $background-color2;
+
+    &::placeholder{
+        color: $placeholder;
+        font-size: 14px;
+        font-style: italic;
+    }
+}
+
+.button{
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 50%;
+    border: 0;
+    background-color: $border1;
+    outline: 0;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+
+    &Icon{
+        width: 100%;
+        height: 100%;
+        fill: $font-color2;
+        transition: fill 0.25s ease;
+    }
+
+    &:hover{
+        background-color: $accent1;
+    }
+
+    &:hover &Icon{
+        fill: $background-color1;
+    }
+}

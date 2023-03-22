@@ -1,0 +1,59 @@
+@import '../../scss/vars.scss';
+@import '../../scss/mixins.scss';
+
+.dialog{
+    width: 600px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &Header{
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 16px;
+    }
+
+    &Form{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &Field{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 16px;
+    }
+
+    &Controls{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &Input{
+        width: 100%;
+        outline: 0;
+        padding: 10px;
+        border: 1px solid $border1;
+        border-radius: 4px;
+
+        &::placeholder{
+            color: $placeholder;
+            font-size: 14px;
+            font-style: italic;
+        }
+    }
+}
+
+.button{
+    @include button;
+    width: 140px;
+}

@@ -1,0 +1,52 @@
+@import '../../scss/vars.scss';
+@import '../../scss/mixins.scss';
+
+.input{
+    position: relative;
+    width: 100%;
+    height: 160px;
+}
+
+.textarea{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 100%;
+    outline: 0;
+    padding: 10px;
+    height: 160px;
+    border: 1px solid $border1;
+    border-radius: 4px;
+    resize: none;
+    @include highlightableTextareaFontSettings;
+    background-color: transparent;
+
+    &::placeholder{
+        color: $placeholder;
+        font-size: 14px;
+        font-style: italic;
+    }
+}
+
+.underlay{
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    padding: 11px;
+    border-radius: 4px;
+    height: 160px;
+    @include highlightableTextareaFontSettings;
+    color: transparent;
+    overflow-x: hidden;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}

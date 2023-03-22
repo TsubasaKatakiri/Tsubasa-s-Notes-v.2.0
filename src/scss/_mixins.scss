@@ -1,0 +1,30 @@
+@mixin highlightableTextareaFontSettings{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: normal;
+}
+
+@mixin button{
+    margin-right: 20px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    color: $font-color2;
+    font-weight: 600;
+    background-color: $border1;
+    padding: 10px;
+    text-align: center;
+    border-radius: 4px;
+    transition: background-color 0.25s ease, color 0.25s ease;
+
+    &:hover{
+        background-color: $accent1;
+        color: $background-color1;
+    }
+
+    &:last-child, &:only-child{
+        margin-right: 0;
+    }
+}

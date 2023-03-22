@@ -1,0 +1,52 @@
+@import '../../scss/vars.scss';
+
+.toast{
+    background: $okBackground;
+    border: 1px solid $ok;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    width: 100%;
+    max-width: 1000px;
+
+    &.error{
+        background-color: $errorBackground;
+        border-color: $error;
+    }
+}
+
+.toastContainer{
+    position: fixed;
+    top: 72px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.message{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: $font-color1;
+}
+
+.toastButton{
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    cursor: pointer;
+
+    &Icon{
+        fill: $font-color1;
+    }
+}
