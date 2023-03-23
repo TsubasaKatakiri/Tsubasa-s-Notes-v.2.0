@@ -50,8 +50,10 @@ const addNote = createAsyncThunk<IThunkResolve, INoteData, {rejectValue: string}
     'notes/addNote',
     async(noteData : INoteData, {rejectWithValue}) => {
         try {
-            await NoteAPI.addNote(noteData);
+            const noteAdd = await NoteAPI.addNote(noteData);
+            console.log(noteAdd);
             const res : INoteData[] = await NoteAPI.getNotes();
+            console.log(res);
             return { notes: res, message: 'New note added successfully!' } as IThunkResolve;
         } catch (error : any) {
             return rejectWithValue('Note creation failed. Please try again later');

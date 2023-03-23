@@ -37,7 +37,7 @@ export const DialogNote : FC<IProps> = ({id, title, text, tags, setOpen} : IProp
             id: v4(),
             title: data.title,
             text: data.text,
-            tags: tagSet ? stringToTags(tagSet.trim()) : undefined,
+            tags: tagSet ? stringToTags(tagSet.trim()) : [],
             dateCreated: getISODate(),
         }
 

@@ -2,7 +2,9 @@ import axios from 'axios';
 
 import { INoteData } from '../interface/INoteData';
 
-const BASE_URL = 'http://localhost:5000/'
+const devMode = (!process.env.NODE_ENV || process.env.NODE_ENV === 'development')
+
+const BASE_URL = devMode ? '.netlify/functions/' : 'http://localhost:5000/'
 
 const instance = axios.create({
     baseURL: BASE_URL,
@@ -12,7 +14,7 @@ export const NoteAPI = {
     async getNotes(){
         const response = await instance.get('notes');
 
-        return response.data;
+        return devMode ? response.data.notes : response.data;
     },
     async getSingleNote(noteId: string){
         const response = await instance.get(`notes/${noteId}`);

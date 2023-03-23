@@ -15,7 +15,7 @@ import classes from './main-page.module.scss'
 export const MainPage : FC = () => {
     const dispatch = useAppDispatch();
     const { query, notes, isFetching, error, message } = useAppSelector((state) => state.note);
-    const [ noteList, setNoteList ] = useState<null | INoteData[]>(null);
+    const [ noteList, setNoteList ] = useState<INoteData[]>([]);
     const [ tagList, setTagList ] = useState<string[]>([]);
     const [ toastVisible, setToastVisible ] = useState<boolean>(false);
 
@@ -23,7 +23,7 @@ export const MainPage : FC = () => {
         dispatch(getNotes());
 
         const cleanup = () : void => {
-            setNoteList(null);
+            setNoteList([]);
             setTagList([]);
             dispatch(clearNotesState());
         }
@@ -42,7 +42,7 @@ export const MainPage : FC = () => {
     }, [notes])
 
     useEffect(() => {
-        if(notes){
+        if(notes && query !== ''){
             const filteredNotes = notes.filter(note => note.tags?.some(el => el.match(query ? new RegExp(`^(${query})`, 'gi') : '')));
 
             setNoteList(filteredNotes);
