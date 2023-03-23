@@ -43,7 +43,7 @@ export const MainPage : FC = () => {
 
     useEffect(() => {
         if(notes){
-            const filteredNotes = notes.filter(note => note.tags?.some(el => el.match(new RegExp(query, 'gi'))));
+            const filteredNotes = notes.filter(note => note.tags?.some(el => el.match(query ? new RegExp(`^(${query})`, 'gi') : '')));
 
             setNoteList(filteredNotes);
         }

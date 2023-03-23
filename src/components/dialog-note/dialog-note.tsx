@@ -41,9 +41,11 @@ export const DialogNote : FC<IProps> = ({id, title, text, tags, setOpen} : IProp
             dateCreated: getISODate(),
         }
 
-        if(id) dispatch(editNote([id, outputData]));
-        else dispatch(addNote(outputData));
-        setOpen(false);
+        if(data.title && data.text){
+            if(id) dispatch(editNote([id, outputData]));
+            else dispatch(addNote(outputData));
+            setOpen(false);
+        }
     }
 
     const onChangeHandler = (e : ChangeEvent<HTMLTextAreaElement>) : void =>  {
@@ -57,11 +59,11 @@ export const DialogNote : FC<IProps> = ({id, title, text, tags, setOpen} : IProp
             <h3 className={classes.dialogHeader}>{id ? 'Update note' : 'Create new note'}</h3>
             <form className={classes.dialogForm} onSubmit={handleSubmit(onSubmit)}>
                 <div className={classes.dialogField}>
-                    <label htmlFor='title' className={classes.dialogLabel}>Note title</label>
+                    <label htmlFor='title' className={classes.dialogLabel}>Note title (required)</label>
                     <input type='text' className={classes.dialogInput} placeholder='Enter note title' {...register('title')}/>
                 </div>
                 <div className={classes.dialogField}>
-                    <label htmlFor='text' className={classes.dialogLabel}>Note text</label>
+                    <label htmlFor='text' className={classes.dialogLabel}>Note text (required)</label>
                     <HighlightableTextarea name='text' text={text} register={register} onChange={onChangeHandler} tagList={tagSet}/>
                 </div>
                 <div className={classes.dialogField}>

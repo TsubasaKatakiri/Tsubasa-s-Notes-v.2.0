@@ -45,6 +45,43 @@
         "new"
       ],
       "dateCreated": "2023-03-22T22:35:51.203Z"
+    },
+    {
+      "id": "d14756a3-edc8-4f1e-bd3d-2ab666c21e7f",
+      "title": "New note 2",
+      "text": "#New #note 2 ",
+      "tags": [
+        "new",
+        "note"
+      ],
+      "dateCreated": "2023-03-22T22:53:42.724Z"
+    },
+    {
+      "id": "ce52f2c6-0429-4fd7-993f-2a9444d9b367",
+      "title": "",
+      "text": "",
+      "dateCreated": "2023-03-23T08:03:59.897Z"
+    },
+    {
+      "id": "d085d0fa-51c6-4444-b385-e31b7e81426f",
+      "title": "",
+      "text": "",
+      "dateCreated": "2023-03-23T08:04:09.991Z"
+    },
+    {
+      "id": "cdadb76a-9f9d-4f67-820d-81661f7a156e",
+      "title": "",
+      "text": "",
+      "dateCreated": "2023-03-23T08:04:17.106Z"
+    },
+    {
+      "id": "6647e3a3-9bb1-4b4d-89b4-442c212d7236",
+      "title": "Test note 3",
+      "text": "Test note 3 #testing",
+      "tags": [
+        "testing"
+      ],
+      "dateCreated": "2023-03-23T08:16:02.101Z"
     }
   ]
 }
